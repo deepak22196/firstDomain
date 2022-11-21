@@ -14,7 +14,7 @@ function App() {
         ref={iframeRef}
         src="https://seconddomain.pages.dev/"
         style={{ display: "none" }}
-        onload={sendMsg}
+        onLoad={sendMsg}
       ></iframe>
     </>
   );
