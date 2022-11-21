@@ -4,7 +4,7 @@ function App() {
   const iframeRef = useRef();
 
   function sendMsg() {
-    console.log(iframe.current);
+    console.log(iframeRef.current);
     iframeRef.current.contentWindow.postMessage("2222", "*");
   }
   return (
