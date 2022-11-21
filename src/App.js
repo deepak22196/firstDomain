@@ -1,9 +1,20 @@
 import "./App.css";
 
 function App() {
+  const iframeRef = useRef();
+
+  function sendMsg() {
+    iframeRef.current.contentWindow.postMessage("2222", "*");
+  }
   return (
     <>
-      <div>a</div>
+      <div>this site contains the iframe for second one</div>
+      <iframe
+        ref={iframeRef}
+        src="https://seconddomain.pages.dev/"
+        style={{ display: "none" }}
+        onload={sendMsg}
+      ></iframe>
     </>
   );
 }
